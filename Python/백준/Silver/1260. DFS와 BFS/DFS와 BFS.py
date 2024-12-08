@@ -26,14 +26,12 @@ def bfs(li, li2, s):
 n, m, v = map(int, input().split())
 N=[i for i in range(1,n+1)]
 li=[[0 for i in range(n)] for j in range(n)]
-lidfs=[False for i in range(n)]
-libfs=[False for i in range(n)]
 
 for _ in range(m):
     a,b = map(int, input().split())
     li[a-1][b-1] = 1
     li[b-1][a-1] = 1
 
-dfs(li, lidfs, v-1)
+dfs(li, [False]*n, v-1)
 print()
-bfs(li, libfs, v-1)
+bfs(li, [False]*n, v-1)
