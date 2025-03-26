@@ -1,8 +1,8 @@
 n=int(input())
-c=1
+c=0
 sum=0
-for i in range(n-2, 0, -1):
-    sum+=c*i
-    c+=1
-print(sum)
+for i in range(1, n-1):
+    sum+=i
+    c+=sum
+print(c)
 print(3)
